@@ -17,8 +17,8 @@ class Database {
         }
 
         $servername = "localhost";
-        $username = "root";
-        $password = "casio";
+        $username = "XXXXX";
+        $password = "YYYYY";
         $dbname = "eval_4";
         $charset = 'utf8';
         $collate = 'utf8_unicode_ci';
