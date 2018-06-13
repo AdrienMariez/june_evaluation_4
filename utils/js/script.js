@@ -1,1 +1,1 @@
-console.log("hello");
+// console.log("script.js is correctly loading...");

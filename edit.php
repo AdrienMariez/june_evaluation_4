@@ -1,27 +1,26 @@
-<?php include 'models/mod_bdd.php';?>  
-   
-   
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/controllers/autoloader.php';
+?>  
+
    <?php include 'utils/head.php';?>
+   <!-- title is dependent on the version of the page : edition or creation -->
     <title>
-        <?php include 'models/mod_createOrEditTitle.php';?>
+        <?php include 'controllers/createRead/createOrEditTitle.php';?>
     </title>
 </head>
 <body>
-    <!-- this file is currently empty, I'll wait to know if it is needed or not later -->
-    <?php include 'utils/header.php';?>
-
 <!-- header -->
     <header class="flexRow flexWrap justifyStart spacingDown">
         <div id="logoContainer"></div>     
         <div id="pageTitleContainer">
-            <?php include 'models/mod_createOrEditTitle.php';?>
+            <?php include 'controllers/createRead/createOrEditTitle.php';?>
         </div>
     </header>
 
-<!-- list of infos -->
+<!-- content -->
 
-    <section>
-        <?php include 'models/mod_createOrEditContent.php';?> 
+    <section  class="flexCol justifyCntr spacingDown">
+        <?php include 'controllers/createRead/createOrEditContent.php';?> 
     </secion>
 
 

@@ -1,12 +1,11 @@
-<?php include 'mod_models/bdd.php';?>  
-
+<?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/controllers/autoloader.php';
+?>  
 
 <?php include 'utils/head.php';?>
-<title>Suppression</title>
+    <title>Suppression</title>
 </head>
 <body>
-<!-- this file is currently empty, I'll wait to know if it is needed or not later -->
-<?php include 'utils/header.php';?>
 
 <!-- header -->
 <header class="flexRow flexWrap justifyStart spacingDown">
@@ -16,28 +15,7 @@
 
 <!-- page content -->
 
-<?php
-
-if(!empty($_POST['id'])){
-    ?>
-    <section class="flexCol justifyCntr">
-        <div class="flexRow justifyCntr spacingDown">Êtes-vous sûr-e de vouloir supprimer la réservation N° <?php echo $_POST['id']; ?> ?</div>
-        <div class="flexRow justifyCntr">
-            <form action="/index.php" method="get">
-                <button type="submit">Annuler</button>
-            </form>
-            <form action="/models/mod_delete.php" method="post">
-                <input class="invisible" name="id" value="<?php echo $_POST['id']; ?>">
-                <button type="submit">Confirmer la suppression</button>
-            </form>
-        </div>
-    </section>
-    <?php
-}else{
-    echo "erreur : pas de réservation selectionnée.";
-    header("Location: index.php");
-}
-?>
+<?php include 'controllers/remove.php';?>  
 
 
 <?php include 'utils/footer.php';?>
